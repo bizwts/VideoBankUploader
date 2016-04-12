@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/linearlayout_media"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Black"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <MediaController
+            android:id="@+id/mediaController1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </MediaController>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/linearlayout_media"
+        android:gravity="center_vertical|center_horizontal" >
+
+        <com.wings.videobankuploader.globals.TouchImageView
+            android:id="@+id/image_Viewer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:src="@drawable/no_media" />
+
+        <VideoView
+            android:id="@+id/video_Viewer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+        <ProgressBar
+            android:id="@+id/progress_image_viewer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/iv_videoicon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/video_icon2"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="leftmargin">16dip</dimen>
+    <dimen name="rightmargin">16dip</dimen>
+    <dimen name="topmargin">16dip</dimen>
+    <dimen name="photo_width">110dp</dimen>
+    <dimen name="photo_height">110dp</dimen>
+
+</resources>

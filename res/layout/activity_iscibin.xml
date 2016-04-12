@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/iscibin_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/themecolor" >
+
+        <ImageView
+            android:id="@+id/iv_iscibinfolderback"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/actionbar_back_hover"
+            android:padding="5dp"
+            android:src="@drawable/whiteback" />
+
+        <TextView
+            android:id="@+id/tv_iscibinfolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_vertical|center"
+            android:text="Folder Name"
+            android:textColor="@color/White"
+            android:textSize="20dip"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/iscibin_select_action_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:gravity="right"
+            android:padding="5dp"
+            android:text="Select"
+            android:textColor="@color/White"
+            android:textSize="20dip"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/iscibin_frame" >
+
+        <com.tonicartos.widget.stickygridheaders.StickyGridHeadersGridView
+            android:id="@+id/iscibinfolder_galley_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_iscibin_editoptions"
+            android:clipToPadding="false"
+            android:columnWidth="120dip"
+            android:horizontalSpacing="5dp"
+            android:numColumns="auto_fit"
+            android:verticalSpacing="5dp" />
+
+        <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+            android:id="@+id/iscibinfolder_galley_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_iscibin_editoptions"
+            android:clipToPadding="false"
+            android:drawSelectorOnTop="true"
+            android:fastScrollEnabled="true"
+            android:overScrollMode="never"
+            android:scrollbarStyle="outsideOverlay"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/iscibingallery_empty_emoji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/iscibingallery_emoji_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:src="@drawable/nullfolderemoji" />
+
+            <TextView
+                android:id="@+id/iscibingallery_emojitext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="It seems you don&apos;t have any files in these directory."
+                android:textColor="@color/textgrey"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_iscibin_editoptions"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/White"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:weightSum="4" >
+
+            <TextView
+                android:id="@+id/move_iscibingallery_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/login_hover"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Move"
+                android:textColor="@color/White"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/copy_iscibingallery_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/login_hover"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Copy"
+                android:textColor="@color/White"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/remove_iscibingallery_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/login_hover"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Remove"
+                android:textColor="@color/White"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/download_iscibingallery_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/login_hover"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Download"
+                android:textColor="@color/White"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- <com.github.clans.fab.FloatingActionButton -->
+    <!-- android:id="@+id/isci_local_bin_share" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignParentBottom="true" -->
+    <!-- android:layout_alignParentRight="true" -->
+    <!-- android:layout_margin="10dip" -->
+    <!-- android:padding="10dip" -->
+    <!-- android:src="@drawable/cloud_localclipbin" -->
+    <!-- fab:fab_colorNormal="@color/themecolor" -->
+    <!-- fab:fab_colorPressed="#80000000" /> -->
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/iscibin_list_grid_toggleMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        fab:menu_backgroundColor="#80000000"
+        fab:menu_colorNormal="@color/themecolor"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_position="left" >
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/iscibin_power_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/searchicon"
+            fab:fab_colorNormal="@color/themecolor"
+            fab:fab_size="normal" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/iscibin_list_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/locallisticon"
+            fab:fab_colorNormal="@color/themecolor"
+            fab:fab_size="normal" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/iscibin_grid_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/localgridicon"
+            fab:fab_colorNormal="@color/themecolor"
+            fab:fab_size="normal" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/iscibin_local_bin_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cloud_localclipbin"
+            fab:fab_colorNormal="@color/themecolor"
+            fab:fab_size="normal" />
+    </com.github.clans.fab.FloatingActionMenu>
+
+    <Button
+        android:id="@+id/btn_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/login_hover"
+        android:padding="10dip"
+        android:text="Refresh"
+        android:textColor="@color/White" />
+
+</RelativeLayout>

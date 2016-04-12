@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_localbin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Local Clip Bin"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:typeface="monospace" />
+
+    <ListView
+        android:id="@+id/localclipbinlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_localbin"
+        android:layout_marginBottom="75dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/linearemptyview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_localbin"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="75dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/nullfolderemoji" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="It seems you don&apos;t have any Files and Directories.\n\nLet&apos;s add images/video/document/directories."
+            android:textColor="@color/textgrey"
+            android:textSize="23sp" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/blackarrowicon" />
+    </LinearLayout>
+
+    <!-- <com.github.clans.fab.FloatingActionButton -->
+    <!-- android:id="@+id/lcb_download" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignParentBottom="true" -->
+    <!-- android:layout_alignParentLeft="true" -->
+    <!-- android:layout_margin="10dip" -->
+    <!-- android:padding="10dip" -->
+    <!-- android:src="@drawable/cloud_localclipbin" -->
+    <!-- fab:fab_colorNormal="@color/themecolor" -->
+    <!-- fab:fab_colorPressed="#80000000" /> -->
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu_labels_right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        fab:menu_backgroundColor="#80000000"
+        fab:menu_colorNormal="@color/themecolor"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_position="left" >
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/lcb_add_directory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/folder_localclipbin"
+            fab:fab_colorNormal="@color/themecolor"
+            fab:fab_size="normal" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/lcb_open_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gallery_localclipbin"
+            fab:fab_colorNormal="@color/themecolor"
+            fab:fab_size="normal" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/lcb_open_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/camera_localclipbin"
+            fab:fab_colorNormal="@color/themecolor"
+            fab:fab_size="normal" />
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>

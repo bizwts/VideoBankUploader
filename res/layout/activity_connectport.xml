@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <FrameLayout
+        android:id="@+id/cp_linear_layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/themecolor" >
+
+        <ImageView
+            android:id="@+id/cp_iv_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/actionbar_back_hover"
+            android:padding="5dp"
+            android:src="@drawable/whiteback" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_vertical|center"
+            android:text="Connect Port"
+            android:textColor="@color/White"
+            android:textSize="20dip"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/cp_scroll_port_connect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cp_linear_layout_title"
+        android:layout_margin="10dp" >
+
+        <LinearLayout
+            android:id="@+id/cp_ll_port_connect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bottom_line" >
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dip"
+                    android:text="Protocol"
+                    android:textColor="@color/darkgrey" />
+
+                <Spinner
+                    android:id="@+id/cp_spn_protocol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bottom_line"
+                    android:gravity="right"
+                    android:text="http:/" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bottom_line" >
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dip"
+                    android:text="Hostname"
+                    android:textColor="@color/darkgrey" />
+
+                <EditText
+                    android:id="@+id/cp_et_vmr_hostname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bottom_line"
+                    android:digits="0123456789."
+                    android:hint="Hostname"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|numberDecimal"
+                    android:paddingBottom="10dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bottom_line" >
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dip"
+                    android:text="Port"
+                    android:textColor="@color/darkgrey" />
+
+                <EditText
+                    android:id="@+id/cp_et_port"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bottom_line"
+                    android:digits="0123456789"
+                    android:hint="Port"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:paddingBottom="10dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:weightSum="1" >
+
+                <Button
+                    android:id="@+id/cp_btn_portconnect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/login_hover"
+                    android:text="Connect"
+                    android:textColor="@color/White" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="8dp"
+                    android:text="Recent Connections"
+                    android:textColor="@color/themecolor"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@color/themecolor" />
+
+                <com.wings.videobankuploader.globals.NestedListView
+                    android:id="@+id/cp_listview_previoushostnames"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/greybackground"
+                    android:dividerHeight="1dip" >
+                </com.wings.videobankuploader.globals.NestedListView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

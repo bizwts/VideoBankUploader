@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="themetextcolor">#FFFFFF</color>
+    <color name="themecolor">#0398f7</color>
+    <color name="alphathemecolor">#600398f7</color>
+    <color name="Black">#000000</color>
+    <color name="White">#FFFFFF</color>
+    <color name="grey">#D8D8D8</color>
+    <color name="textgrey">#9C9C9C</color>
+    <color name="darkgrey">#b2b2b2</color>
+    <color name="greybackground">#c1c1c1</color>
+    <color name="actionbar_color">#400000FF</color>
+    <color name="backactionbar_color">#70a4a4a4</color>
+
+</resources>
